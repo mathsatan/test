@@ -66,45 +66,6 @@ object Diophantine {
     }
   }
 
-  /*def g(list: List[PrimeFactor], tuple: FactorList): List[FactorList] = {
-    val result: ListBuffer[FactorList] = ListBuffer[FactorList]()
-    (0 to list.size).foreach((i) => {
-      val x = (
-        tuple._1 ::: list.slice(0, i),
-        tuple._2 ::: list.slice(i, list.size)
-      )
-      result += x
-    }
-    )
-    result.toList
-  }*/
-
-    /*val factList = Primes.factorize(n)
-    val list = toPrimeFactList(factList)
-    val result = comb(list, (Nil, Nil))
-    val factors = toIntList(result)
-    gen(factors)
-  }
-
-  def toPrimeFactList(list: List[Int]): Try[List[PrimeFactor]] = {
-    val result: ListBuffer[PrimeFactor] = ListBuffer[PrimeFactor]()
-      list.distinct.foreach(x => {
-          result += PrimeFactor(x, primePower(list, x))
-        })
-    Success(result.toList)
-  }
-
-  def toIntList(list: List[FactorList]): List[(Int, Int)] = {
-    val result: ListBuffer[(Int, Int)] = ListBuffer[(Int, Int)]()
-    list.foreach(tuple => {
-      val a: Int = if (tuple._1.isEmpty) 1 else tuple._1.reduceLeft(_ * _).n
-      val b: Int = if (tuple._2.isEmpty) 1 else tuple._2.reduceLeft(_ * _).n
-      result += Tuple2[Int, Int](a, b)
-    })
-    result.toList
-  }*/
-
-
     /*type FactorList = (List[PrimeFactor], List[PrimeFactor])
     def oldComb(list: List[PrimeFactor], a: FactorList): List[FactorList] = list match {
       case h :: t => if (h.power < 2) {
